@@ -1,9 +1,6 @@
 package com.zwwf;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Map;
-import java.util.Scanner;
+import java.util.*;
 
 public class Main {
     public static void main(String[] args) {
@@ -65,8 +62,10 @@ public class Main {
             strings.add(word);
         }
 
+        strings.sort(Comparator.comparingInt(String::length));
+
         strings.forEach((string) -> {
-            System.out.println(string + "\n");
+            System.out.println(string);
         });
     }
 }
